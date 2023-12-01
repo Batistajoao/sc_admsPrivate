@@ -46,9 +46,4 @@ def check_password():
 
 
 if check_password():
-    user_loog = str(st.session_state["username"])
-    arquivo = open('user_log.txt', 'r+')
-    print(arquivo.readlines()) #Consegue ler
-    arquivo.write(f'{user_loog}' +"\n") #consegue editar
-    arquivo.close()
     app_class()
