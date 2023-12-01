@@ -41,8 +41,8 @@ def check_password():
     login_form()
     if "password_correct" in st.session_state:
         st.error("😕 User not known or password incorrect")
-    return user_logado
     return False
+return user_logado
 
 
 if check_password():
