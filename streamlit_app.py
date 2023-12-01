@@ -46,8 +46,9 @@ def check_password():
             else:
                 # Password correct.
                 return True
-if check_password():
-    app_class()
+
+if not check_password():
+    st.stop()
   
     
     
