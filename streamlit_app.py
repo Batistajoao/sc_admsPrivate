@@ -1,5 +1,7 @@
 import hmac
 import streamlit as st
+from app_main import app_class
+from time import sleep
 
 titulo_login = st.title('Ass de Deus :orange[_Monte Sinai_]')
 st.subheader(' :blue[_Uma Revelação de Deus_]')
