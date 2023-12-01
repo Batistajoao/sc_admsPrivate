@@ -20,6 +20,12 @@ def check_password():
             st.form_submit_button("Log in", on_click=password_entered)
 
     def password_entered():
+        user_loog = str(st.session_state["username"])
+        arquivo = open('user_log.txt', 'r+')
+        print(arquivo.readlines()) #Consegue ler
+        arquivo.write(f'{user_loog}' +"\n") #consegue editar
+        arquivo.close()
+        
         """Checks whether a password entered by the user is correct."""
         if st.session_state["username"] in st.secrets[
             "passwords"
@@ -28,13 +34,6 @@ def check_password():
             st.secrets.passwords[st.session_state["username"]],
         ):
             st.session_state["password_correct"] = True
-
-            user_loog = str(st.session_state["username"])
-            arquivo = open('user_log.txt', 'r+')
-            print(arquivo.readlines()) #Consegue ler
-            arquivo.write(f'{user_loog}' +"\n") #consegue editar
-            arquivo.close()
-            
             del st.session_state["password"]  # Don't store the username or password.
             #del st.session_state["username"]
             
