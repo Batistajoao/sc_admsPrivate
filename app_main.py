@@ -40,7 +40,7 @@ Romanos 12:7_""")
         if self.menuPrincipal == 'Financeiro':
             titulo_financeiro = st.title('Em Desenvolvimento...')
 
-        if self.menuPrincipal == 'Financeiro':
+        if self.menuPrincipal == 'Inventario':
             titulo_financeiro = st.title('Em Desenvolvimento.')
         
             
