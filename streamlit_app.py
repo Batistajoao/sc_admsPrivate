@@ -42,4 +42,5 @@ def check_password():
 
 if not check_password():
     st.stop()
-app_class()
+if check_password():
+    app_class()
