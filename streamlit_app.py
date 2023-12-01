@@ -18,7 +18,8 @@ def check_password():
 
     #Retorna `True` se o usuário tiver uma senha correta.
 
-    def password_entered():        
+    def password_entered():
+        
         
         #Verifica se a senha digitada pelo usuário está correta.
         if (
@@ -55,7 +56,6 @@ def check_password():
             "Password", type="password", on_change=password_entered, key="password"
         )
         st.error("😕 Usuário desconhecido ou senha incorreta")
-        
         return False
     else:
         # Password correct.
@@ -65,4 +65,6 @@ def check_password():
     
 if check_password():
     app_class()
+  
+    
     
