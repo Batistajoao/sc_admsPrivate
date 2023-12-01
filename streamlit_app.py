@@ -7,9 +7,17 @@ def check_password():
     def login_form():
         """Form with widgets to collect user information"""
         with st.form("Credentials"):
+            titulo_login = st.title('Ass de Deus :orange[_Monte Sinai_]')
+            st.subheader(' :blue[_Uma Revelação de Deus_]')
+            st.divider()
+            
             st.text_input("Username", key="username")
             st.text_input("Password", type="password", key="password")
             st.form_submit_button("Log in", on_click=password_entered)
+            
+            
+            
+            st.subheader('Faça seu Login')
 
     def password_entered():
         """Checks whether a password entered by the user is correct."""
