@@ -11,13 +11,9 @@ def check_password():
                         titulo_login = st.title('Ass de Deus :orange[_Monte Sinai_]')
                         st.subheader(' :blue[_Uma Revelação de Deus_]')
                         st.divider()
-                        st.subheader('Faça seu Login')   
-            
-                #Retorna `True` se o usuário tiver uma senha correta.
-            
-            def password_entered():
-                
-                
+                        st.subheader('Faça seu Login')            
+                #Retorna `True` se o usuário tiver uma senha correta.            
+            def password_entered():                
                 #Verifica se a senha digitada pelo usuário está correta.
                 if (
                     st.session_state["username"] in st.secrets["passwords"]
@@ -25,26 +21,19 @@ def check_password():
                     == st.secrets["passwords"][st.session_state["username"]]
                 ):
                     st.session_state["password_correct"] = True
-                    del st.session_state["password"]  # não armazene nome de usuário + senha
-            
-                    #del st.session_state["username"]
-                    
-                    
+                    del st.session_state["password"]  # não armazene nome de usuário + senha            
+                    #del st.session_state["username"]                    
                 else:
                     st.session_state["password_correct"] = False
             
             if "password_correct" not in st.session_state:
-                widget_tela_login()
-                
-                
+                widget_tela_login()                
                 # Primeira execução, mostre as entradas para nome de usuário + senha.
                 st.text_input("Usuário", on_change=password_entered, key="username")
                 st.text_input(
                     "Senha", type="password", on_change=password_entered, key="password"
                 )
-            
-                
-            
+                         return True            
             elif not st.session_state["password_correct"]:
                 widget_tela_login()
                 # Password not correct, show input + error.
@@ -57,9 +46,6 @@ def check_password():
             else:
                 # Password correct.
                 return True
-
-
-    
 if check_password():
     app_class()
   
