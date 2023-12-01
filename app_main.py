@@ -37,8 +37,11 @@ Romanos 12:7_""")
         if self.menuPrincipal == 'Emitir Credencial':
             self.tela_emitir_credencial()
 
-        if self.menuPrincipal == 'Produtos':
-            pass
+        if self.menuPrincipal == 'Financeiro':
+            titulo_financeiro = st.title('Em Desenvolvimento...')
+
+        if self.menuPrincipal == 'Financeiro':
+            titulo_financeiro = st.title('Em Desenvolvimento.')
         
             
 
