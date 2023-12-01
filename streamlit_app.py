@@ -64,7 +64,7 @@ def check_password():
 
     
 if check_password():
-    app_class()
+    app_main.app_class()
   
     
     
