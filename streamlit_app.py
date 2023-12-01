@@ -43,6 +43,6 @@ def check_password():
 
 
 if check_password():
-    st.write(st.secrets['passwords'])
+    st.write(st.text_input("Username", key="username"))
     
     app_class()
