@@ -43,5 +43,5 @@ def check_password():
 
 
 if check_password():
-    print(st.secrets['database']['user'])
+    print(st.secrets['passwords']['user'])
     app_class()
