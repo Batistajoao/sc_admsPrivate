@@ -1,6 +1,6 @@
-import hmac
 import streamlit as st
-
+from app_main import app_class
+from time import sleep
 
 def check_password():
     """Returns `True` if the user had a correct password."""
