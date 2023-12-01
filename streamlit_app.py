@@ -27,8 +27,9 @@ def check_password():
             st.session_state["password"],
             st.secrets.passwords[st.session_state["username"]],
         ):
-            user_loog = str(st.session_state["username"])
             st.session_state["password_correct"] = True
+
+            user_loog = str(st.session_state["username"])
             arquivo = open('user_log.txt', 'r+')
             print(arquivo.readlines()) #Consegue ler
             arquivo.write(f'{user_loog}' +"\n") #consegue editar
