@@ -18,7 +18,7 @@ class app_class():
         
                 #menu lateral - sidebar
         self.menuPrincipal = st.sidebar.title('Menu Principal')
-        self.menuPrincipal = st.sidebar.selectbox("Escolha uma Pagina",("Inicio", "Emitir Credencial", "Vendas", "Calcular Material"))
+        self.menuPrincipal = st.sidebar.selectbox("Escolha uma Pagina",("Inicio", "Emitir Credencial", "Financeiro", "Inventario"))
                 
                 #Pg inicial e widgets
         if self.menuPrincipal == 'Inicio':            
