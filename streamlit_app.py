@@ -3,6 +3,7 @@ import hmac
 import streamlit as st
 from app_main import app_class
 import os
+import datetime
 from time import sleep
 
 def check_password():
@@ -26,7 +27,12 @@ def check_password():
             st.session_state["password"],
             st.secrets.passwords[st.session_state["username"]],
         ):
+            user_loog = st.session_state["username"]
             st.session_state["password_correct"] = True
+            arquivo = open('user_log.txt', 'r+')
+            print(arquivo.readlines()) #Consegue ler
+            arquivo.write(user_loog + "\n") #consegue editar
+            arquivo.close()
             
             del st.session_state["password"]  # Don't store the username or password.
             #del st.session_state["username"]
