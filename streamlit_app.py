@@ -30,7 +30,6 @@ def check_password():
             del st.session_state["password"]  # Don't store the username or password.
             user_logado = st.session_state["username"]
             #del st.session_state["username"]
-            return user_logado
         else:
             st.session_state["password_correct"] = False
 
@@ -42,6 +41,7 @@ def check_password():
     login_form()
     if "password_correct" in st.session_state:
         st.error("😕 User not known or password incorrect")
+    return user_logado
     return False
 
 
