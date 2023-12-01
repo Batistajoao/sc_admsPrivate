@@ -13,8 +13,9 @@ def check_password():
             titulo_login = st.title('Ass de Deus :orange[_Monte Sinai_]')
             st.subheader(' :blue[_Uma Revelação de Deus_]')
             st.divider()
-            st.subheader('Faça seu Login')
-            st.form_submit_button("Log in", on_click=check_password)
+            st.text_input("Username", key="username")
+            st.text_input("Password", type="password", key="password")
+            st.form_submit_button("Log in", on_click=password_entered)
 
     def password_entered():
         """Checks whether a password entered by the user is correct."""
