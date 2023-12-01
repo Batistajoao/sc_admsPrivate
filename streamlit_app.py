@@ -53,5 +53,5 @@ def check_password():
 
 
 if check_password():
-    st.write(st.session_state["username"])    
+    #st.write(st.session_state["username"])    
     app_class()
