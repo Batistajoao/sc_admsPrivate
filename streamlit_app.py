@@ -31,6 +31,7 @@ def check_password():
             user_logado = (st.session_state["username"])
             #del st.session_state["username"]
             return user_logado
+            st.write(user_logado)
         else:
             st.session_state["password_correct"] = False
 
@@ -46,6 +47,6 @@ def check_password():
 
 
 if check_password():
-    st.write(user_logado)
+    
     
     app_class()
