@@ -42,5 +42,5 @@ def check_password():
     return False
 
 
-if not check_password():
+if check_password():
     app_class()
