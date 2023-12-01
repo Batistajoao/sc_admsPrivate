@@ -11,7 +11,7 @@ def widget_tela_login():
             st.subheader(' :blue[_Uma Revelação de Deus_]')
             st.divider()
             st.subheader('Faça seu Login')
-            st.form_submit_button("Log in", on_click=password_entered)
+            st.form_submit_button("Log in", on_click=check_password)
 
 def check_password():
     
