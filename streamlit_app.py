@@ -43,4 +43,4 @@ def check_password():
 
 
 if not check_password():
-    app_main.app_class()
+    app_class()
